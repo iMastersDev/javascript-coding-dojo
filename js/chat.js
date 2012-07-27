@@ -31,13 +31,23 @@ chatDojo.chat = {
 		}
 	},
 	addHistory: function(chat, user) {
+		var fragment = document.createDocumentFragment();
+		var li;
+		
 		if (chat.lastMessage !== user) {
-			chat.history.value += user + '\n';
+			li = document.createElement("li");
+			li.setAttribute("class", "user");
+			li.appendChild(document.createTextNode(user));
+			
+			fragment.appendChild(li);
 		}
 		
-		chat.history.value += chat.message.value + '\n';
-		chat.history.scrollTop = chat.history.scrollHeight;
+		li = document.createElement("li");
+		li.setAttribute("class", "message");
+		li.appendChild(document.createTextNode(chat.message.value));
+		fragment.appendChild(li);
 		
+		chat.history.appendChild(fragment);
 		chat.lastMessage = user;
 	}
 };
