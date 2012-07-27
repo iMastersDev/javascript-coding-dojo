@@ -17,7 +17,7 @@ body {
 	background: #efe;
 	float: left;
 	width: 200px;
-	border: 1px solid #999;
+	border: 1px solid #070;
 	border-radius: 5px;
 	margin: 0px 5px;
 
@@ -33,13 +33,14 @@ body {
 		overflow: auto;
 		width: 100%;
 		height: 260px;
-		margin: 5px auto 0;
+		margin: 0 auto;
 		padding: 0 0 0 5px;
 		font-family: monospace;
 
 
 		header {
 			font-weight: 700;
+			margin-top:5px;
 		}
 
 		.entry {
@@ -58,11 +59,17 @@ body {
 					content: ' ';
 					display: inline;
 				}
+
+				&:hover + time {
+					visibility: visible;
+				}
 			}
 
 			time {
-				font-size: .8em;
+				color: #00e;
+				font-size: .7em;
 				font-weight: 700;
+				visibility: hidden;
 			}
 
 		}
