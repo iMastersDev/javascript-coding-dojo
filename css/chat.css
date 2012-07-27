@@ -1,0 +1,25 @@
+.chat {
+	display: block;
+	float: left;
+	width: 200px;
+	height: 300px;
+	border: 1px solid #999999;
+	border-radius: 4px;
+	margin: 0px 5px;
+}
+
+.chat .history {
+	display: block;
+	width: 190px;
+	height: 260px;
+	border: 0px none;
+	background: #FDFDFD;
+	margin: 5px auto;
+}
+
+.chat .message {
+	display: block;
+	width: 200px;
+	height: 24px;
+	border: 0px none;
+}
