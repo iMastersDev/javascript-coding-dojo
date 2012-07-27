@@ -6,32 +6,34 @@ var chatDojo = chatDojo || {};
 
 chatDojo.chat = {
 	start : function(user) {
-		var messages = [];
-		var histories = [];
+		var chat = [];
 		
 		this.lastUser = null;
-		
 		this.forms = document.querySelectorAll('.chat');
+		
 		for (var i = 0, t = this.forms.length; i < t; ++i) {
-			histories[i] = this.forms[i].querySelector('.history');
-			messages[i] = this.forms[i].querySelector('.message');
+			chat[i] = {
+				message: this.forms[i].querySelector('.message'),
+				history: this.forms[i].querySelector('.history'),
+				lastMessage: null
+			};
 			
 			this.forms[i].onsubmit = (function(i, evt){
-				this.addHistory(histories[i], messages[i].value, user);
-				messages[i].value = "";
+				this.addHistory(chat[i], user);
+				chat[i].message.value = "";
 				
 				return false;
 			}).bind(this, i);
 		}
 	},
-	addHistory: function(history, message, user) {
-		if (this.lastUser !== user) {
-			history.value += user + '\n';
+	addHistory: function(chat, user) {
+		if (chat.lastMessage !== user) {
+			chat.history.value += user + '\n';
 		}
 		
-		history.value += message + '\n';
-		history.scrollTop = history.scrollHeight;
+		chat.history.value += chat.message.value + '\n';
+		chat.history.scrollTop = chat.history.scrollHeight;
 		
-		this.lastUser = user;
+		chat.lastMessage = user;
 	}
 };
