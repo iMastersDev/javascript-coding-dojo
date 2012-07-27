@@ -16,6 +16,7 @@
 	background: #FDFDFD;
 	margin: 5px auto;
 	resize: none;
+	outline: none;
 }
 
 .chat .message {
@@ -23,4 +24,5 @@
 	width: 200px;
 	height: 24px;
 	border: 0px none;
+	outline: none;
 }
