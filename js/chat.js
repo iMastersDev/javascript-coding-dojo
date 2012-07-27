@@ -48,6 +48,7 @@ chatDojo.chat = {
 		fragment.appendChild(li);
 		
 		chat.history.appendChild(fragment);
+		chat.history.scrollTop = chat.history.scrollHeight;
 		chat.lastMessage = user;
 	}
 };
