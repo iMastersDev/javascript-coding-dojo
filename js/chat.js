@@ -16,6 +16,7 @@ chatDojo.chat = {
 			
 			this.forms[i].onsubmit = (function(i, evt){
 				histories[i].value += messages[i].value + '\n';
+				histories[i].scrollTop = histories[i].scrollHeight;
 				messages[i].value = "";
 				
 				return false;
