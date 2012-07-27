@@ -57,7 +57,7 @@ chatDojo.chat = {
 		var time = document.createElement("time");
 		var date = new Date();
 
-		time.appendChild(document.createTextNode([date.getHours(), date.getMinutes()].join(":")));
+		time.appendChild(document.createTextNode([date.getHours().pad(2), date.getMinutes().pad(2)].join(":")));
 		
 		p.appendChild(document.createTextNode(chat.message.value));
 		li.appendChild(p);
