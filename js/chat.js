@@ -24,7 +24,3 @@ chatDojo.chat = {
 		}
 	}
 };
-
-console.log('hello');
-
-chatDojo.chat.start();
