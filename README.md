@@ -1,4 +1,8 @@
-javascript-coding-dojo
+#JavaScript Condign Dojo
 ======================
 
-Javascript coding-dojo
+'''
+
+console.log( 'Hello JS World!' );
+
+'''
