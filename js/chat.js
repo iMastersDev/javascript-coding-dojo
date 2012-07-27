@@ -16,7 +16,7 @@ chatDojo.chat = {
 			messages[i] = this.forms[i].querySelector('.message');
 			
 			this.forms[i].onsubmit = (function(i, evt){
-				histories[i].text += messages[i].value;
+				histories[i].value += messages[i].value;
 				messages[i].value = "";
 				
 				return false;
