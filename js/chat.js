@@ -10,7 +10,7 @@ chatDojo.chat = {
 		var histories = [];
 		
 		this.forms = document.querySelectorAll('.chat');
-		
+		console.log(this.forms);	
 		for (var i = 0, t = this.forms.length; i < t; ++i) {
 			histories[i] = this.forms[i].querySelector('.history');
 			messages[i] = this.forms[i].querySelector('.message');
@@ -24,3 +24,7 @@ chatDojo.chat = {
 		}
 	}
 };
+
+console.log('hello');
+
+chatDojo.chat.start();
