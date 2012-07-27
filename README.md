@@ -1,4 +1,4 @@
-#JavaScript Condign Dojo
+#JavaScript Coding Dojo
 ======================
 
 '''
