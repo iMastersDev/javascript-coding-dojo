@@ -19,8 +19,10 @@ chatDojo.chat = {
 			};
 			
 			this.forms[i].onsubmit = (function(i, evt){
-				this.addHistory(chat[i], user);
-				chat[i].message.value = "";
+				if (chat[i].message.value.trim() !== "") {
+					this.addHistory(chat[i], user);
+					chat[i].message.value = "";
+				}
 				
 				return false;
 			}).bind(this, i);
