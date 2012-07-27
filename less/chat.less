@@ -35,15 +35,36 @@ body {
 		height: 260px;
 		margin: 5px auto 0;
 		padding: 0 0 0 5px;
-		list-style: none;
 		font-family: monospace;
 
-		.user {
+
+		header {
 			font-weight: 700;
 		}
 
 		.entry {
-			margin-left: 1em;
+
+			ol {
+				list-style: none;
+				padding: 0 0 0 1em;
+				margin: 0;
+			}
+
+			p{
+				display: inline;
+				margin: 0;
+
+				&:after {
+					content: ' ';
+					display: inline;
+				}
+			}
+
+			time {
+				font-size: .8em;
+				font-weight: 700;
+			}
+
 		}
 		
 	}
@@ -57,7 +78,6 @@ body {
 		border-radius: 0 0 5px 5px;
 		outline: none;
 		font-family: monospace;
-
 
 		&:focus{
 			background: #d1ffd1;
